@@ -116,11 +116,11 @@ handle these cases better, at the cost of more implementation complexity.
 **Actual chunk count produced across all 8 rule books:**
 
 ```
-[your answer here]
+Stored 149 total chunks in the vector database.
 ```
 
 **One thing that surprised you or didn't match your expectations:**
 
 ```
-[your answer here]
+I would have thought that there would be more chunks across 8 board games. Given our chunk size is 300 and 250 of those characters should be unique ( 250(unique characters in each chunk)*149(chunks) ) / 100(roughly 1 sentence) I estimate there's 373 sentences among all board game instructions
 ```
