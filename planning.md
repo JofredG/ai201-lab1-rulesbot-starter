@@ -8,12 +8,15 @@ There are no wrong answers — write enough that you could explain your reasonin
 ## Chunking Strategy
 
 **Chunk size:**
+300 character chunk sizes ensure that rules - often written in 1-3 sentences - are captured without fragmenting parts of the rule with too short of a chunk size, or grabbing more than one rule in a chunk with too large of a chunk size.
 
 
 **Overlap:**
+A 50 character overlap is allowed between chunks to emulate adding a roughly a sentence of context to the datastore. 
 
 
 **Why this strategy fits rule book text:**
+Rulebooks pack a lot short passages, so smaller chunks tend to outperform paragraph-level splittingfor targeted Q&A.
 
 
 ---
