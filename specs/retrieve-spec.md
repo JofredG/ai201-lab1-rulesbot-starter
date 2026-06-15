@@ -55,7 +55,10 @@ Results should be ordered from most to least relevant (lowest to highest distanc
 *Sketch out what one item in your return list looks like as a concrete example. Where does each field come from in the query results?*
 
 ```
-[your answer here]
+list of dicts
+[{"text": "<300 char chunk>", "game":"catan", "distance":0.1}, {"text": "<300 char chunk>", "game":"catan", "distance":0.2}, etc.]
+
+note: not sure if the item at the first index is the most similar result
 ```
 
 ---
@@ -65,7 +68,7 @@ Results should be ordered from most to least relevant (lowest to highest distanc
 *`_collection.query()` returns nested lists. Describe what index you need to access to get the actual list of results for a single query, and why the nesting exists.*
 
 ```
-[your answer here]
+I need to get index[0] to acces the result of a single query since _collection.query() returns a dict where each value is a list of lists where each inner list is the result of one query. The dict keys are ids, documents, metadatas, and distances.
 ```
 
 ---
@@ -75,7 +78,7 @@ Results should be ordered from most to least relevant (lowest to highest distanc
 *Will you filter out results above a certain distance score, or return all `n_results` regardless of how relevant they are? What are the tradeoffs of each approach?*
 
 ```
-[your answer here]
+I will filter out results above a .7 distance score since they aren't as relevant as those that score below the threshold.
 ```
 
 ---
